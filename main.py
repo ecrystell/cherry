@@ -1,6 +1,6 @@
 import discord
 import os
-from keepalive import keep_alive
+
 from discord.ext import commands
 from dotenv import load_dotenv
 import pymongo
@@ -497,5 +497,5 @@ async def on_ready():
     print('We have logged in as {}'.format(bot.user))
 
 
-keep_alive()
+
 bot.run(os.getenv('TOKEN'))
