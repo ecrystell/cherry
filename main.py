@@ -51,6 +51,12 @@ def createembed(name, avatar, type):
         color = 0x820812
         footer = "*rocket engine noises from the viper's mic*"
 
+    elif type == 'mcsr':
+        title = "{}'s MCSR ranked result".format(name)
+        description = "yo im feinberg"
+        color = 0x84ce33
+        footer = "hax is full clear"
+
     embed = discord.Embed(title=title, description=description, color=color)
     embed.set_author(name=name, icon_url=avatar)
     embed.set_footer(text=footer)
@@ -292,6 +298,14 @@ async def play(ctx, game):
                 "u encounter another ecouple n the gf reports u for throwing",
                 "the jett aces when u promise him ur snap if he clutches n u get $1000"
             ]
+
+    elif game == "mcsr":
+        values = [
+            "you instant nav the end portal and hit the zero cycle, winning $500",
+            "you pull a ludwig bed clutch in the end and die",
+            "you win the perch race at mcsr playoffs and win $1000"
+        ]
+    
 
     if check != None:
         if george == False:
