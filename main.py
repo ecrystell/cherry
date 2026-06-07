@@ -74,11 +74,14 @@ def calctotal(cards):
         else:
             one += 1
 
-    for i in range(one):
-        if (total + 11) <= 21:
-            total += 11
-        else:
-            total += 1
+    totalone = 11 * one
+    if totalone + total > 21:
+        for i in range(one):
+            totalone -= 10
+            if totalone + total <= 21:
+                break
+    total += totalone
+    
 
     return total
 
